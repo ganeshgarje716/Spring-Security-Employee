@@ -1,5 +1,5 @@
 package com.ganesh.service.ipm;
 
-public class ServiceImp {
+public class EmployeeServiceImp {
 
 }

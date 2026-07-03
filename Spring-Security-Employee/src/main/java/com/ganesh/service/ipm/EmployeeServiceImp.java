@@ -1,5 +1,7 @@
 package com.ganesh.service.ipm;
 
-public class EmployeeServiceImp {
+import com.ganesh.service.EmployeeService;
+
+public class EmployeeServiceImp implements EmployeeService{
 
 }

@@ -10,5 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 public class Employee {
+	
+
 
 }

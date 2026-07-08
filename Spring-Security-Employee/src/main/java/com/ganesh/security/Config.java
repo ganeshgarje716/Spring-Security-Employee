@@ -50,6 +50,10 @@ public class Config {
 			
 			auth.requestMatchers("/api/v1/employee/save").hasRole("ADMIN");
 			
+			auth.requestMatchers("/api/v1/employee/all").hasAnyRole("USER", "ADMIN");
+			
+			auth.requestMatchers("/api/v1/employee/byid/**").hasRole("USER");
+			
 			auth.requestMatchers("/auth/create-user").permitAll();
 		});
 		

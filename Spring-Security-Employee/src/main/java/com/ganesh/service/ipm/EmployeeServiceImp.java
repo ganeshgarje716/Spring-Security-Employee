@@ -95,4 +95,39 @@ public class EmployeeServiceImp implements EmployeeService{
 		throw new EmployeeNotFoundException("Employee Not Found With Id = "+id);
 	}
 
+
+
+	@Override
+	public String updateEmployeeById(Integer id, Employee employee) {
+
+		Optional<Employee> byId = employeeRepository.findById(id);
+		
+		if (byId.isPresent()) {
+			
+			Employee existing = byId.get();
+			
+			existing.setFirstName(employee.getFirstName());
+			existing.setLastName(employee.getLastName());
+			existing.setEmail(employee.getEmail());
+			existing.setMobileNo(employee.getMobileNo());
+			existing.setGender(employee.getGender());
+			existing.setDep(employee.getDep());
+			existing.setSalary(employee.getSalary());
+			existing.setDob(employee.getDob());
+			existing.setStatus(employee.getStatus());
+			existing.setIsMarried(employee.getIsMarried());
+			existing.setExperience(employee.getExperience());
+			existing.setEducationQualification(employee.getEducationQualification());
+			existing.setAddress(employee.getAddress());
+			existing.setAge(employee.getAge());
+			existing.setDesignation(employee.getDesignation());			
+			
+			employeeRepository.save(existing);
+			
+			return "Employee Update Success";
+		}
+		
+		throw new EmployeeNotFoundException("Employee Not Found With Id = "+id);
+	}
+
 }

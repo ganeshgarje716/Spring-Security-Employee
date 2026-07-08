@@ -15,5 +15,7 @@ public interface EmployeeService {
 	Employee findEmployeeById(Integer id);
 	
 	String updateEmployeeById(Integer id, Employee employee);
+	
+	String deleteEmployeeById(Integer id);
 
 }

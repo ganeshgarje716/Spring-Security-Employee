@@ -56,6 +56,8 @@ public class Config {
 			
 			auth.requestMatchers("/api/v1/employee/updatebyid/**").hasRole("ADMIN");
 			
+			auth.requestMatchers("/api/v1/employee/deletebyid/**").hasRole("ADMIN");
+			
 			auth.requestMatchers("/auth/create-user").permitAll();
 		});
 		

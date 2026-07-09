@@ -19,7 +19,7 @@ public class AppException {
 		return new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
 	}
 	
-	
+	@ExceptionHandler(value = MethodArgumentNotValidException.class)
 	public ResponseEntity<Map<String, String>> handalMethodArgumentException(MethodArgumentNotValidException e) {
 		
 		Map<String, String> errors=new HashMap<>();
